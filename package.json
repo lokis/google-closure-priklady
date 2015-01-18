@@ -1,0 +1,15 @@
+{
+  "name": "google-closure-priklady",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "bower": "^1.3.12",
+    "gulp": "^3.6.0",
+    "gulp-clean": "^0.3.1",
+    "gulp-closure-compiler": "^0.2.14",
+    "gulp-html-replace": "^1.4.2",
+    "gulp-rename": "^1.2.0",
+    "gulp-size": "^1.2.0",
+    "gulp-util": "^3.0.2"
+  }
+}
