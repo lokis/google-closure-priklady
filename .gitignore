@@ -1,3 +1,5 @@
 /.idea
 /bower_components
 /node_modules
+/test-compiler-01-simple/build.html
+/test-compiler-01-simple/compiled.js

@@ -25,25 +25,18 @@ gulp.task('compile-js', ['clean'], function () {
             compilerPath: '../bower_components/closure-compiler/lib/vendor/compiler.jar',
             fileName: sources.js.build,
             compilerFlags: {
-                //compilation_level: 'ADVANCED_OPTIMIZATIONS',
-                define: [
-                    "goog.DEBUG=false"
-                ],
-                only_closure_dependencies: true,
-                output_wrapper: '(function(){%output%})();',
-                warning_level: 'VERBOSE'
+                compilation_level: 'ADVANCED_OPTIMIZATIONS',
+                output_wrapper: '(function(){%output%})();'
             }
         }))
         .pipe(gulp.dest('.'));
 });
 
-
-
 gulp.task('build-html-main', ['clean'], function () {
     return gulp.src(sources.html.main)
         .pipe(htmlreplace({
             'js-my': {
-                src: sources.html.build,
+                src: sources.js.build,
                 tpl: '<script src="%s"></script>'
             }
         }))
@@ -51,9 +44,6 @@ gulp.task('build-html-main', ['clean'], function () {
         .pipe(gulp.dest('.'))
         .on('error', gutil.log)
 });
-
-
-
 
 gulp.task('clean', function () {
     var src = [sources.js.build, sources.html.build];
