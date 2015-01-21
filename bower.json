@@ -2,6 +2,7 @@
   "name": "google-closure-priklady",
   "version": "0.0.1",
   "dependencies": {
-    "closure-compiler": "~0.2.6"
+    "closure-compiler": "~0.2.6",
+    "closure-library": "google/closure-library"
   }
 }
